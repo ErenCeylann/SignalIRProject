@@ -1,0 +1,96 @@
+﻿@model UpdateNotificationDto
+@{
+    ViewData["Title"] = "UpdateNotification";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Bildirim İşlemleri</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <form method="post">
+                   
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Bildirim Güncelleme İşlemi</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <input type="hidden" asp-for="NotificationId" />
+                                <label for="email">Bildirim Türü</label><br />
+
+                                <div class="btn btn-success">
+                                    <input type="radio" checked id="success" name="Type" asp-for="Type" value="notif-icon notif-success" />
+                                    <label for="success">Başarılı</label>
+                                </div>
+                                <div class="btn btn-warning">
+                                    <input type="radio" id="warning" name="Type" asp-for="Type" value="notif-icon notif-warning" />
+                                    <label for="warning">Uyarı</label>
+                                </div>
+                                <div class="btn btn-primary">
+                                    <input type="radio" id="primary" name="Type" asp-for="Type" value="notif-icon notif-primary" />
+                                    <label for="primary">Bildirim</label>
+                                </div>
+                                <div class="btn btn-danger">
+                                    <input type="radio" id="danger" name="Type" asp-for="Type" value="notif-icon notif-danger" />
+                                    <label for="danger">Hata</label>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="card-body">
+                            <div class="form-group">
+
+                                <label for="email">Bildirim Icon</label><br />
+
+                                <div class="btn btn-light">
+                                    <input type="radio" checked id="icon1" name="Icon" asp-for="Icon" value="la la-comment" />
+                                    <label for="icon1"><i class="la la-comment"></i></label>
+                                </div>
+                                <div class="btn btn-light">
+                                    <input type="radio" id="icon2" name="Icon" asp-for="Icon" value="la la-bell" />
+                                    <label for="icon2"><i class="la la-bell"></i></label>
+                                </div>
+                                <div class="btn btn-light">
+                                    <input type="radio" id="icon3" name="Icon" asp-for="Icon" value="la la-envelope" />
+                                    <label for="icon3"><i class="la la-envelope"></i></label>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="card-body">
+                            <div class="form-group">
+
+                                <label for="email">Bildirim Açıklama</label><br />
+                                <input type="text" class="form-control" asp-for="Description" />
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+
+                    <div class="card-action">
+                        <button class="btn btn-success">Bildirimi Güncelle</button>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+

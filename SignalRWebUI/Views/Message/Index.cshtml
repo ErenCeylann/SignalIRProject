@@ -1,0 +1,94 @@
+﻿@{
+    ViewData["Title"] = "Message";
+    Layout = null;
+}
+<script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+<script src="~/js/cheat.js"></script>
+<!DOCTYPE html>
+<html>
+
+@await Component.InvokeAsync("_UILayoutHeadComponentPartial")
+
+<body class="sub_page">
+
+    <div class="hero_area">
+        @await Component.InvokeAsync("_UILayoutNavBarPartial")
+    </div>
+
+    <section class="food_section layout_padding">
+        <div class="container">
+			<script type="text/javascript">
+				$(document).ready(() => {
+
+
+
+					var connection = new signalR.HubConnectionBuilder().withUrl("https://localhost:7112/SignalRHub").build();
+
+					$("#connstatus").text(connection.state);
+
+					connection.start().then(() => {
+						$("#connstatus").text(connection.state);
+					
+					}).catch((err) => {console.log(err)});
+
+                    connection.on("ReceiverClientCount", (clientCount) => {
+                        $("#clientCount").text("Aktif Kullanıcı Sayısı:"+clientCount);
+					});
+
+				});
+			</script>
+            <div class="container mt-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card shadow-lg rounded-4 border-0">
+                            <div class="card-body">
+                                <h2 class="text-center text-danger fw-bold mb-4">SignalR Restoran Anlık Mesajlaşma</h2>
+
+                                <h2 class="text-info" id="clientCount"></h2>
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Kullanıcı Adınız</label>
+                                    <input type="text" id="userInput" class="form-control" placeholder="Adınızı girin">
+                                </div>
+
+                              
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Mesajınız</label>
+                                    <input type="text" id="messageInput" class="form-control" placeholder="Mesajınızı yazın">
+                                </div>
+
+                               
+                                <div class="text-center">
+                                    <button id="sendButton" class="btn btn-warning px-4 fw-bold">Mesajı Gönder</button>
+                                </div>
+
+                            
+                                <hr class="my-4">
+                                <div class="message-box bg-white p-3 rounded-3 border" style="max-height: 300px; overflow-y: auto;">
+                                    <ul id="messageList" class="list-group list-group-flush"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    @await Component.InvokeAsync("UILayoutFooterComponentPartial")
+
+    @await Component.InvokeAsync("UILayoutScriptComponentPartial")
+    <script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/cheat.js"></script>
+
+</body>
+
+</html>
+

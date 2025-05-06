@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+
+<div class="container mt-5">
+    
+
+    <div class="card shadow p-4">
+        <h2 class="text-center mb-4">QR Kod Oluşturucu</h2>
+        <form method="post">
+        <div class="mb-3">
+            <label for="qrInput" class="form-label">Metin / Bağlantı:</label>
+            <input type="text" id="qrInput" class="form-control" name="value" placeholder="Metin girin veya bir URL yazın...">
+        </div>
+        <button class="btn btn-primary">QR Kodu Oluştur</button>
+        </form>
+        @if (ViewBag.QRCodeImage != null)
+        {
+            <div class="mt-4 text-center">
+                <img id="qrImage" src="@ViewBag.QRCodeImage" class="border p-2" alt="QR Kodu Görüntüsü">
+            </div>
+        }
+        else
+        {
+            <div class="mt-4 text-center">
+                <img id="qrImage" src="https://www.meram45noluasm.com.tr/konyaasm/konya-aile-saglik-merkezi-655c10908a99d003223818.jpg" style="width:400px;height:400px;" class="border p-2" alt="QR Kodu Görüntüsü">
+            </div>
+        }
+
+    </div>
+</div>
+
+

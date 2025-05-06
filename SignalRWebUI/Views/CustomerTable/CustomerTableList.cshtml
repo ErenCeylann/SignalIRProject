@@ -1,0 +1,118 @@
+﻿@model List<ResultMenuTableDto>
+@{
+    ViewData["Title"] = "CustomerTableList";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<style>
+
+
+    h1 {
+        color: #333;
+    }
+
+    .masa-alani {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    .masa {
+        width: 200px;
+        height: 120px;
+        border-radius: 15px;
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        transition: transform 0.2s ease;
+        margin-left:20px;
+        margin-bottom:20px;
+    }
+
+        .masa:hover {
+            transform: scale(1.05);
+        }
+
+    .dolu {
+        background-color: #e74c3c; /* kırmızı */
+    }
+
+    .bos {
+        background-color: #2ecc71; /* yeşil */
+    }
+
+    .icon {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+    a,i{
+        color:white;
+    }
+    a,i:hover{
+        color:white;
+    }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+@await Component.InvokeAsync("_UILayoutHeadComponentPartial")
+
+<body class="sub_page">
+    <div class="hero_area">
+        @await Component.InvokeAsync("_UILayoutNavBarPartial")
+    </div>
+    <br />
+    <br />
+    <div class="container-fluid">
+        <div class="row px-xl-5">
+            <div class="col-12">
+                <nav class="breadcrumb bg-dark mb-30">
+                    <a href="/Default/Index" class="breadcrumb-item text-white">AnaSayfa</a>
+                    <a href="/Default/Index" class="breadcrumb-item text-white">Api Listesi</a>
+                    <span class="breadcrumb-item active">Tasty Api</span>
+                </nav>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row px-xl-5">
+            
+            <h1>Masa Durumu</h1>
+            <div class="col-md-12">
+            <div class="masa-alani">
+                @foreach (var item in Model)
+                {
+                    if (item.Status==true)
+                    {
+                            <div class="masa dolu"><a href="/Basket/Index/@item.MenuTableId"><i class="fas fa-money icon"></i></a> @item.MenuTableName<br />Dolu </div>
+                    }
+                    else
+                    {
+                            <div class="masa bos"><a href="/Menu/Index/@item.MenuTableId"><i class="fas fa-chair icon"></i></a> @item.MenuTableName<br />Boş</div>
+                    }
+
+                }
+                
+            </div>
+            </div>
+        </div>
+    </div>
+
+    @await Component.InvokeAsync("UILayoutFooterComponentPartial")
+
+    @await Component.InvokeAsync("UILayoutScriptComponentPartial")
+
+
+</body>
+
+</html>
+

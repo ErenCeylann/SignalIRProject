@@ -1,0 +1,54 @@
+﻿@model CreateMessageDto
+<section class="book_section layout_padding">
+    <div class="container">
+        <div class="heading_container">
+            <h2>
+                Bize Ulaşın
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form_container">
+                    <form method="post" asp-action="SendMessage" asp-controller="Default">
+                        <div>
+                            <input type="text" asp-for="Name" class="form-control" placeholder="Adınız Soyadınız" />
+                        </div>
+                        <div>
+                            <input type="text" asp-for="PhoneNumber" class="form-control" placeholder="Telefon Numaranız" />
+                        </div>
+                        <div>
+                            <input type="email" asp-for="Mail" class="form-control" placeholder="Mail Adresiniz" />
+                        </div>
+                        <div>
+                            <input type="text" asp-for="Subject" class="form-control" placeholder="Konu" />
+                        </div>
+                        <div>
+                            <textarea class="form-control" asp-for="MessageContent" style="height:200px;" placeholder="Mesajınız..."></textarea>
+                        </div>
+
+                        <div class="btn_box">
+                            <button id="btn">
+                                Mesajı Gönder
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="map_container ">
+                    <iframe src="@ViewBag.location" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
+            </div>
+        </div>
+</section>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    $("#btn").click(function () {
+        swal("Başarılı!", "Mesajınız Alınmıştır!", "success");
+        setTimeout(function () {
+            window.location.assign("/Default/Index");
+        }, 5000);
+    });
+</script>

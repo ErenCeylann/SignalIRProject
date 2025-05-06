@@ -1,0 +1,52 @@
+﻿@model UpdateDiscountDto
+@{
+    ViewData["Title"] = "UpdateDiscount";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">İndirimli Ürün İşlemleri</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <form method="post">
+                    <input type="hidden" asp-for="DiscountId" />
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">İndirimli Ürün Güncelleme İşlemi</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="email">Ürün Adı</label>
+                                <input type="text" asp-for="Title" class="form-control" id="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">İndirim Oranı</label>
+                                <input type="text" asp-for="Amount" class="form-control" id="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Görsel</label>
+                                <input type="text" asp-for="ImageUrl" class="form-control" id="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Açıklama</label>
+                                <textarea asp-for="Description" rows="10" class="form-control" id="email"></textarea>
+                            </div>
+
+                        </div>
+                        <div class="card-action">
+                            <button class="btn btn-success">Güncelle</button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
