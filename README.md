@@ -1,22 +1,22 @@
-🚀 ASP.NET Core API & SignalR ile QR Kodlu Sipariş ve Anlık Bildirim Sistemi Geliştirdim!
-📚 Udemy / Murat Yücedağ eğitimi sayesinde backend alanında önemli kazanımlar elde ettim. Projede hem gerçek zamanlı veri yönetimi hem de servis altyapısını baştan sona kendim kurdum.
-💡 Kullandığım teknolojiler ve öğrendiklerim:
- 🟢 SignalR → Anlık veri gönderimi (Gerçek zamanlı sipariş takibi)
- 📷 QR Kod Oluşturma → Masaların kolayca tanınmasını sağladım
- 📧 Mail Gönderimi → SMTP ile başarılı e-posta işlemleri
- 💬 Mesajlaşma → Kullanıcılar arası basit mesaj altyapısı
- 🔄 AutoMapper → Dto–Entity dönüşümlerinde pratik yapı
- 📦 Katmanlı Mimari → Temiz, sürdürülebilir ve geliştirilebilir API yapısı
-🖥️ Geliştirdiğim projede:
- ✔️ Müşteri QR okutarak sipariş verebiliyor
- ✔️ Siparişler anlık olarak mutfağa iletiliyor
- ✔️ Masa doluluk durumu anlık renklerle gösteriliyor
- ✔️ Basit mesaj altyapısı sayesinde iletişim destekleniyor
-📌 Bu projeyle hem .NET ekosistemini hem de gerçek zamanlı uygulama mantığını pekiştirdim.
- 🧠 Görüş, tavsiye ve eleştirilerinize her zaman açığım.
+🚀 ASP.NET Core API & SignalR ile QR Kodlu Sipariş ve Anlık Bildirim Sistemi Geliştirdim!</br>
+📚 Udemy / Murat Yücedağ eğitimi sayesinde backend alanında önemli kazanımlar elde ettim. Projede hem gerçek zamanlı veri yönetimi hem de servis altyapısını baştan sona kendim kurdum.</br>
+💡 Kullandığım teknolojiler ve öğrendiklerim:</br>
+ 🟢 SignalR → Anlık veri gönderimi (Gerçek zamanlı sipariş takibi)</br>
+ 📷 QR Kod Oluşturma → Masaların kolayca tanınmasını sağladım</br>
+ 📧 Mail Gönderimi → SMTP ile başarılı e-posta işlemleri</br>
+ 💬 Mesajlaşma → Kullanıcılar arası basit mesaj altyapısı</br>
+ 🔄 AutoMapper → Dto–Entity dönüşümlerinde pratik yapı</br>
+ 📦 Katmanlı Mimari → Temiz, sürdürülebilir ve geliştirilebilir API yapısı</br>
+🖥️ Geliştirdiğim projede:</br>
+ ✔️ Müşteri QR okutarak sipariş verebiliyor</br>
+ ✔️ Siparişler anlık olarak mutfağa iletiliyor</br>
+ ✔️ Masa doluluk durumu anlık renklerle gösteriliyor</br>
+ ✔️ Basit mesaj altyapısı sayesinde iletişim destekleniyor</br>
+📌 Bu projeyle hem .NET ekosistemini hem de gerçek zamanlı uygulama mantığını pekiştirdim.</br>
+ 🧠 Görüş, tavsiye ve eleştirilerinize her zaman açığım.</br>
 
-📁Proje Linki:https://lnkd.in/d7FrZpPS
-📸 Projeye ait ekran görüntüleri aşağıda!
+📁Proje Linki:https://lnkd.in/d7FrZpPS</br>
+📸 Projeye ait ekran görüntüleri aşağıda!</br>
  👇
  ![Ekran görüntüsü 2025-05-07 000529](https://github.com/user-attachments/assets/a9578c16-04f9-4e25-a4a6-418cf9af4872)
 ![Ekran görüntüsü 2025-05-07 000443](https://github.com/user-attachments/assets/2744d1a4-ea17-4ed0-a08a-5e242b06e1e9)
