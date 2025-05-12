@@ -15,7 +15,7 @@
 📌 Bu projeyle hem .NET ekosistemini hem de gerçek zamanlı uygulama mantığını pekiştirdim.</br>
  🧠 Görüş, tavsiye ve eleştirilerinize her zaman açığım.</br>
 
-📁Proje Linki:https://lnkd.in/d7FrZpPS</br>
+
 📸 Projeye ait ekran görüntüleri aşağıda!</br>
  👇
  ![Ekran görüntüsü 2025-05-07 000529](https://github.com/user-attachments/assets/a9578c16-04f9-4e25-a4a6-418cf9af4872)
